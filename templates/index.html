@@ -5,7 +5,14 @@
   <body>    
     <script src="/static/js/file_select.js" type="text/javascript"></script>
     <form>
-      <input type="button" value="Choose File" onclick="GetFileURL()">
+      <fieldset>
+        <legend>Bulk Upload</legend>
+        <input type="button" value="Choose File" onclick="GetFileURL()"><br>
+        <input type="radio" name="type" value="Samples">Samples<br>
+        <input type="radio" name="type" value="ChemicalAnalyses">Chemical Analyses<br>
+        <input type="radio" name="type" value="Images">Images<br>
+        <input type="submit" value="Parse file for upload">
+      </fieldset>
     </form>
   </body>    
 </html>
