@@ -40,10 +40,10 @@ function ValidateURL(URL) {
 function ParseFileForUpload() {
     var Checked;
     if (document.getElementById('Samples').checked) {
-        Checked = "Samples";
+        Checked = "SampleTemplate";
     }
     else if (document.getElementById('ChemicalAnalyses').checked) {
-        Checked = "Chemical Analyses";
+        Checked = "ChemicalAnalysesTemplate";
     }
     else if (document.getElementById('Images').checked) {
         Checked = "Images";

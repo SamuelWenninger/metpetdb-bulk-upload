@@ -11,10 +11,11 @@ def index():
 @app.route("/test", methods=['POST'])
 def test():
     UserInput = request.json
-    print type(UserInput)
-    print UserInput
-    #Call the parse program
-    #os.system("command line thing goes here")
+    if (UserInput != None):
+        print UserInput['checked']
+        #Call the parse program
+        os.system("python ./ParseTest/bulk-upload.py " + str(UserInput['url']) \
+                + " " + str(UserInput['checked']))
     return "hello"
 
 
