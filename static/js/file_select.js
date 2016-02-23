@@ -48,6 +48,14 @@ function ParseFileForUpload() {
     else if (document.getElementById('Images').checked) {
         Checked = "Images";
     }
-    document.write(Checked + "<br>");
-    document.write(URL);
+    //document.write(Checked + "<br>");
+    //document.write(URL);
+    //window.location.href = "/test";
+    var data = {};
+    data["checked"] = Checked;
+    data["url"] = URL;
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/test", true);
+    xhr.setRequestHeader("Content-type", "application/json");
+    xhr.send(JSON.stringify(data));
 }
