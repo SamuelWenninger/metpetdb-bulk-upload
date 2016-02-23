@@ -21,7 +21,7 @@ def test():
                 ./ParseTest/bulk-upload.py " + str(UserInput['url']) \
                 + " " + str(UserInput['checked']))
         print "Response: ", response
-    return "hello"
+    return response
 
 if __name__ == "__main__":
     app.run(debug=True)

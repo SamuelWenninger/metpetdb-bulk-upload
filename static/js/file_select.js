@@ -19,6 +19,7 @@ function GetFileURL() {
             img.height="20";
             img.width="20";
             img.src = "../static/img/x.jpg";
+            URL = null;
             
         }
         else {
@@ -61,4 +62,5 @@ function ParseFileForUpload() {
     xhr.open("POST", "/test", false);
     xhr.setRequestHeader("Content-type", "application/json");
     xhr.send(JSON.stringify(data));
+    document.write(xhr.responseText);
 }
