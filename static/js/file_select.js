@@ -1,5 +1,5 @@
 //Global variables
-var URL;
+var URL = null;
 
 //Capture the URL from the user via a pop-up text box
 function GetFileURL() {
@@ -38,7 +38,7 @@ function ValidateURL(URL) {
 
 //Submit the URL
 function ParseFileForUpload() {
-    var Checked;
+    var Checked = null;
     if (document.getElementById('Samples').checked) {
         Checked = "SampleTemplate";
     }
@@ -48,6 +48,9 @@ function ParseFileForUpload() {
     else if (document.getElementById('Images').checked) {
         Checked = "Images";
     }
+    if (URL == null || Checked == null) {
+        return;
+    }
     //document.write(Checked + "<br>");
     //document.write(URL);
     //window.location.href = "/test";
@@ -55,7 +58,7 @@ function ParseFileForUpload() {
     data["checked"] = Checked;
     data["url"] = URL;
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "/test", true);
+    xhr.open("POST", "/test", false);
     xhr.setRequestHeader("Content-type", "application/json");
     xhr.send(JSON.stringify(data));
 }

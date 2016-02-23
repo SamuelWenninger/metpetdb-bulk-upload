@@ -11,9 +11,9 @@
         <input type="button" value="Choose File" id="a" onclick="GetFileURL()">
           <div style="display:inline" id="CheckOrX"></div><br>
         Selected URL: <div style="display:inline" id="URLEntered"></div><br>
-        <input type="radio" name="type" id="Samples">Samples<br>
-        <input type="radio" name="type" id="ChemicalAnalyses">Chemical Analyses<br>
-        <input type="radio" name="type" id="Images">Images<br>
+        <input type="radio" name="filetype" id="Samples" checked>Samples<br>
+        <input type="radio" name="filetype" id="ChemicalAnalyses">Chemical Analyses<br>
+        <input type="radio" name="filetype" id="Images">Images<br>
         <input type="submit" value="Parse file for upload" onclick="ParseFileForUpload()">
       </fieldset>
     </form>
